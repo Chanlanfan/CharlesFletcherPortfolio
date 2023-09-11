@@ -1,0 +1,82 @@
+* {
+margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: red; /* For browsers that do not support gradients */
+    background-repeat: no-repeat;
+    background-image: linear-gradient(red, yellow, green);
+}
+
+
+header {
+    background-color: white;
+    margin: 0;
+}
+
+/* Header Name */
+
+header #name-heading{
+    position: relative;
+    left: 0px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+
+}
+
+header #name-heading:hover{
+animation-name: name-heading-hover;
+animation-duration: .8s;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+
+}
+
+    @keyframes name-heading-hover{
+        0%  {color: black;} 
+        50% {color: rgb(66, 66, 255);
+                text-shadow: 1px 1px 10px  rgba(0, 0, 255, 0.466);
+            font-size: +40px;}
+        100% {color: rgb(0, 0, 0);}
+        } 
+
+/* Header Horz. line */
+
+    header hr{
+        position: relative;
+        right: 0px;
+box-shadow: 0 5px 10px black;
+
+        animation: header-hr;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+    }
+
+    
+    @keyframes header-hr{
+        0%  {right: -100%;} 
+        100% {right: 0px;}
+        }
+
+
+.project-container{
+position: absolute;
+top: 200px;
+margin: 0 20px 0 20px;
+padding: 10px;
+}
+
+#block-1{
+    background-color: white;
+    border-radius: 10px;
+    height: 400px;
+    width: 300px;
+    padding: inherit;
+}
