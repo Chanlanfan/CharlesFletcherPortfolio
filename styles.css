@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Roboto+Condensed:wght@300&family=Source+Sans+3:wght@200&display=swap');
+
+
 * {
 margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:  'Courier New', monospace;
 
 }
 
@@ -9,74 +12,47 @@ html {
 }
 
 body {
-    height: 100%;
-    background-color: red; /* For browsers that do not support gradients */
-    background-repeat: no-repeat;
-    background-image: linear-gradient(red, yellow, green);
+    background-image: linear-gradient(30deg,rgba(156, 243, 242, 0.583) , rgba(50, 255, 252, 0.583));
 }
 
 
 header {
-    background-color: white;
-    margin: 0;
+padding: 20px 0 0 30px;
 }
 
 /* Header Name */
 
 header #name-heading{
-    position: relative;
-    left: 0px;
-    text-align: center;
-    padding: 20px 0 20px 0;
-
+font-size: 25px;
+letter-spacing: -1px;
 }
 
-header #name-heading:hover{
-animation-name: name-heading-hover;
-animation-duration: .8s;
-animation-timing-function: linear;
-animation-iteration-count: 1;
-
+#main-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+background-color: rgba(0, 255, 255, 0);
+    width: 80%;
+    height:700px;
+    border-radius: 200px;
+}
+#main-title:hover{
+    box-shadow: 0 0 1000px 10px white;
 }
 
-    @keyframes name-heading-hover{
-        0%  {color: black;} 
-        50% {color: rgb(66, 66, 255);
-                text-shadow: 1px 1px 10px  rgba(0, 0, 255, 0.466);
-            font-size: +40px;}
-        100% {color: rgb(0, 0, 0);}
-        } 
-
-/* Header Horz. line */
-
-    header hr{
-        position: relative;
-        right: 0px;
-box-shadow: 0 5px 10px black;
-
-        animation: header-hr;
-        animation-duration: 1s;
-        animation-timing-function: ease-in;
-    }
-
-    
-    @keyframes header-hr{
-        0%  {right: -100%;} 
-        100% {right: 0px;}
-        }
 
 
-.project-container{
-position: absolute;
-top: 200px;
-margin: 0 20px 0 20px;
-padding: 10px;
-}
 
-#block-1{
-    background-color: white;
-    border-radius: 10px;
-    height: 400px;
-    width: 300px;
-    padding: inherit;
+
+#main-title h1{
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+white-space: nowrap;
+
+    font-family: 'MuseoModerno', cursive;
+font-size: 1300%;
+line-height: 100%;
 }
