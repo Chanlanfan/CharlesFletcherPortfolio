@@ -5,14 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Charles Fletcher Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <header>
         <h1 id="name-heading">Charles Fletcher's Portfolio</h1>
     </header>
 
+    <div class="background-container">
+        <div id="block1"><p>+</p></div>
+
+    </div>
+
 <div id="main-title">
 <h1>INSPIRED BY<br>POTENTIAL</h1>
+<script>
+    gsap.to('#main-title h1', {
+  xPercent: -150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#main-title h1",
+    start: "top center",
+    end: "bottom top",
+    scrub: true
+  }
+})
+</script>
+<h1 id="hello-scroll">HI!</h1>
+<script>
+    gsap.to('#main-title #hello-scroll', {
+  xPercent: 2000,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#main-title #hello-scroll",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+})
+</script>
+
+
+
+<h2 id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem doloribus accusantium dolorem vitae ipsa illo labore repudiandae impedit. Vero voluptatum magnam, consequatur nihil doloremque dolore veritatis ipsam iure cum assumenda.
+Aspernatur, quod voluptatibus facilis quo accusantium cum! Eaque pariatur reprehenderit odio consequuntur facere tempora sit, dolor ipsam at atque voluptate velit, nobis obcaecati libero. Temporibus voluptates velit unde tenetur id?
+Numquam debitis nobis laboriosam quas aliquam necessitatibus, tempore, hic id quae porro rem ullam sed earum unde doloremque tempora provident quis! Veniam nesciunt doloribus ratione quo corrupti delectus, illo consectetur!
+Vitae, architecto magni. Delectus, quod obcaecati sed natus saepe dolor ipsam, inventore maxime earum eligendi incidunt omnis ipsum atque. Optio blanditiis voluptatum aspernatur, laboriosam omnis nesciunt non rerum ab beatae.
+Eos maxime labore perferendis! Nisi ut suscipit nobis dignissimos vel et minima nostrum sint cupiditate omnis eum officiis maiores porro, delectus totam earum. Non eaque quas voluptatibus facere aspernatur magni!
+Odio natus maiores explicabo et dolor harum suscipit eligendi optio quas facilis eveniet debitis, unde expedita asperiores sunt quae. Ipsa nihil error commodi consequatur sapiente rem quos voluptates veniam doloremque.
+Velit itaque autem debitis accusamus, odio id ab tempore unde. Esse labore iste neque error tenetur sequi quaerat corrupti voluptatem voluptas animi? Eum recusandae voluptas obcaecati nulla accusamus nemo ducimus!
+Dignissimos vitae animi, earum saepe maiores dolor praesentium in at asperiores nihil dolore libero. Exercitationem quo saepe fuga totam earum explicabo, aperiam rem animi, delectus nam rerum illo reprehenderit. Fugit?
+Hic enim eaque ipsa fugiat beatae porro pariatur, consequatur delectus obcaecati dignissimos possimus labore tempora iure. Iure ullam eligendi quisquam, assumenda, sunt et ratione eaque minus tempora, corrupti autem iste.
+Quis deleniti quasi blanditiis. Aut placeat dolorem dolor iure delectus? Deleniti, quia. Accusamus, earum blanditiis expedita minima nobis, consequuntur pariatur ratione dolor quo quisquam numquam sunt assumenda dolorum, soluta delectus.</h2>
 </div>
 
     </div>
