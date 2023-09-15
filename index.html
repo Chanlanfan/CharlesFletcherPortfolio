@@ -59,7 +59,7 @@
 
 <div id="skill-list">
 
-<h1>My Skills:</h1>
+<h1 id="header-skill">My Skills: (hover over blocks)</h1>
     <script>
         gsap.registerPlugin(ScrollTrigger);
     gsap.to('#skill-list h1', {
@@ -74,20 +74,53 @@
 
   }
 })
-gsap.to('#skill-list h1', {
+gsap.to('#skill-list', {
 
 scrollTrigger: {
-  trigger: "#skill-list h1",
+  trigger: "#skill-list",
   markers: false,
   start: "top 100",
   end: "+=3000",
-  pin: "#skill-list h1",
+  pin: "#skill-list",
   scrub: 0.1,
 
 
 }
 })
         </script>
+
+<div id="left">
+<div id="block">
+    <h1>HTML:</h1><br>
+    <p>Years experience: 4</p>
+    <p>Fluency level: Excellent</p>
+    <p>Projects: 10+</p>
+    
+    </div>
+    <div id="block">
+        <h1>CSS:</h1><br>
+        <p>Years experience: 4</p>
+        <p>Fluency level: Excellent</p>
+        <p>Projects: 10+</p>
+        
+        </div>
+        <div id="block">
+            <h1>JS:</h1><br>
+            <p>Years experience: 3</p>
+            <p>Fluency level: OK</p>
+            <p>Projects: 4+</p>
+            
+            </div>
+            <div id="block">
+                <h1>C++:</h1><br>
+                <p>Years experience: 5</p>
+                <p>Fluency level: OK</p>
+                <p>Projects: 4+</p>
+                <p>Mainly used for: Arduino</p>
+                
+                </div>
+            </div>
+        
 </div>
 
 </body>
