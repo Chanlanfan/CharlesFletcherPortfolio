@@ -90,7 +90,8 @@ line-height: 100%;
 #main-title #hello-scroll{
     position: absolute;
     top: 15em;
-    left: -200px;
+    left: -100vh;
+
     font-size: 3em;
 }
 
