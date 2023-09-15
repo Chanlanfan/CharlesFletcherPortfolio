@@ -8,7 +8,7 @@ margin: 0;
 }
 
 html {
-    min-height: 200vh;
+    min-height: 2000vh;
 }
 
 body {
@@ -19,6 +19,9 @@ header {
 padding: 20px 0 0 30px;
 }
 
+b {
+    font-weight: 800;
+}
 
 /* Header Name */
 
@@ -32,13 +35,13 @@ letter-spacing: -1px;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 500vh;
+    height:2000vh;
     
-    background-image: linear-gradient(30deg,rgba(156, 243, 242, 0.583) , rgba(50, 255, 252, 0.583));
+    background-image: linear-gradient(-30deg, rgba(247, 0, 255, 0.583),rgba(156, 243, 242, 0.583) 95% );
     filter: blur(4px)
 }
 .background-container #block1{
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     right: 200px;
@@ -47,11 +50,10 @@ color: blue;
 }
 
 
-.background-container #block1:hover{
+.background-container #block1 p:hover{
     animation-name: y-rotate;
 animation-duration: 2s;
 animation-timing-function: linear;
-animation-fill-mode: forwards;
 animation-iteration-count: infinite;
 }
 
@@ -90,7 +92,7 @@ line-height: 100%;
 #main-title #hello-scroll{
     position: absolute;
     top: 15em;
-    left: -100vh;
+    left: -1vh;
 
     font-size: 3em;
 }
@@ -104,4 +106,19 @@ width: 80%;
     font-family: 'MuseoModerno', cursive;
 font-size: 1.5em;
 line-height: 100%;
+}
+
+#about {
+    position: absolute;
+    top: 120vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+
+#skill-list h1 {
+    position: absolute;
+    top: 280vh;
+    left: -20vh;
 }

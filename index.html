@@ -21,7 +21,6 @@
 <div id="main-title">
 <h1>INSPIRED BY<br>POTENTIAL</h1>
 <script>
-        Draggable.create("#block1", { inertia: true, type: "rotation", bounds: "body" });
     gsap.to('#main-title h1', {
   xPercent: -150,
   ease: "none",
@@ -33,34 +32,63 @@
   }
 })
 </script>
-<h1 id="hello-scroll">HI!</h1>
-<script>
-    gsap.to('#main-title #hello-scroll', {
-  xPercent: 2000,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#main-title #hello-scroll",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-  }
-})
-</script>
 
 
 
-<h2 id="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem doloribus accusantium dolorem vitae ipsa illo labore repudiandae impedit. Vero voluptatum magnam, consequatur nihil doloremque dolore veritatis ipsam iure cum assumenda.
-Aspernatur, quod voluptatibus facilis quo accusantium cum! Eaque pariatur reprehenderit odio consequuntur facere tempora sit, dolor ipsam at atque voluptate velit, nobis obcaecati libero. Temporibus voluptates velit unde tenetur id?
-Numquam debitis nobis laboriosam quas aliquam necessitatibus, tempore, hic id quae porro rem ullam sed earum unde doloremque tempora provident quis! Veniam nesciunt doloribus ratione quo corrupti delectus, illo consectetur!
-Vitae, architecto magni. Delectus, quod obcaecati sed natus saepe dolor ipsam, inventore maxime earum eligendi incidunt omnis ipsum atque. Optio blanditiis voluptatum aspernatur, laboriosam omnis nesciunt non rerum ab beatae.
-Eos maxime labore perferendis! Nisi ut suscipit nobis dignissimos vel et minima nostrum sint cupiditate omnis eum officiis maiores porro, delectus totam earum. Non eaque quas voluptatibus facere aspernatur magni!
-Odio natus maiores explicabo et dolor harum suscipit eligendi optio quas facilis eveniet debitis, unde expedita asperiores sunt quae. Ipsa nihil error commodi consequatur sapiente rem quos voluptates veniam doloremque.
-Velit itaque autem debitis accusamus, odio id ab tempore unde. Esse labore iste neque error tenetur sequi quaerat corrupti voluptatem voluptas animi? Eum recusandae voluptas obcaecati nulla accusamus nemo ducimus!
-Dignissimos vitae animi, earum saepe maiores dolor praesentium in at asperiores nihil dolore libero. Exercitationem quo saepe fuga totam earum explicabo, aperiam rem animi, delectus nam rerum illo reprehenderit. Fugit?
-Hic enim eaque ipsa fugiat beatae porro pariatur, consequatur delectus obcaecati dignissimos possimus labore tempora iure. Iure ullam eligendi quisquam, assumenda, sunt et ratione eaque minus tempora, corrupti autem iste.
-Quis deleniti quasi blanditiis. Aut placeat dolorem dolor iure delectus? Deleniti, quia. Accusamus, earum blanditiis expedita minima nobis, consequuntur pariatur ratione dolor quo quisquam numquam sunt assumenda dolorum, soluta delectus.</h2>
 </div>
 
-    </div>
+<div id="about">
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    gsap.to('#about', {
+
+  scrollTrigger: {
+    trigger: "#about",
+    markers: false,
+    start: "top 100",
+    end: "+=1000",
+    pin: "#about",
+    scrub: 0.1,
+
+
+  }
+})
+        </script>
+<h2>Hi! My name is Charles, and I am known as the 'Tech Guy'<br>I'm not very good at essays, so I'll get ChatGPT to do it for me:<br><br><b>"My journey through the digital landscape has equipped me with fluent skills in HTML, CSS, JavaScript, Java, and C++. These coding languages are not just tools for me; they are pathways to creativity and problem-solving. Beyond the world of programming, I dive into the realm of music technology, where I have gained extensive knowledge about mixers, EQ (Equalization), and the intricate web of audio cables. Whether I'm writing lines of code or tinkering with audio equipment, I find joy in exploring the endless possibilities that technology and music offer. Join me on this exciting journey as we uncover the intersections between tech and music, and how they shape our modern world."</b><br><br>Literaly what I wanted to say.<br>P.S. I made this site from scratch. ChatGPT hasn't helped me! (yet)</h2>
+</div>
+
+<div id="skill-list">
+
+<h1>My Skills:</h1>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    gsap.to('#skill-list h1', {
+        xPercent: 150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#skill-list h1",
+    markers: true,
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true,
+
+  }
+})
+gsap.to('#skill-list h1', {
+
+scrollTrigger: {
+  trigger: "#skill-list h1",
+  markers: false,
+  start: "top 100",
+  end: "+=3000",
+  pin: "#skill-list h1",
+  scrub: 0.1,
+
+
+}
+})
+        </script>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="testStyles.css">
+    <title>Charles Fletcher Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <h1>scroll down</h1>
+    <div class="box green"></div>
+    <script>
+gsap.to("h1", {
+  scrollTrigger: "h2", // start the animation when ".box" enters the viewport (once)
+  x: 50
+});
+    </script>
+
+
+
+<h2>Begin Scroll</h2>
+</body>
+</html>
