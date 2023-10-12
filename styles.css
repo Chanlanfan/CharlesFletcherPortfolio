@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Roboto+Condensed:wght@300&family=Source+Sans+3:wght@200&display=swap');
 
-
+/* fixxed */
 * {
 margin: 0;
     font-family:  'Courier New', monospace;
@@ -30,7 +30,7 @@ padding: 20px 0 0 30px;
 #page-lines hr{
     margin: 100vh 0 0 0 ;
     padding: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 /* Header Name */
@@ -168,21 +168,20 @@ width: 100vw;
 height: 300vh;
 }
 
-#skill-list #header-skill{
+ .header-skill{
 
 left: 00px;
 font-size: 2.5em;
 white-space: nowrap;
 }
 @media screen and (max-width: 1000px){
-    #skill-list #header-skill{
-font-size: 1.3em;
+    .header-skill {
+font-size: 1.5em ;
         }
 }
 
 
 #skill-list p {
-
     padding: 10px;
     position: absolute;
 width: 80vw;
