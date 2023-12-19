@@ -46,6 +46,18 @@ box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
   z-index:-2;
 }
 
+
+.hint {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 10vh;
+  transform: translateX(-50%);
+  width: 90vw;
+  text-align: center;
+  z-index: 3
+}
+
 header {
 position: fixed;
     height: 5vh;
@@ -135,14 +147,19 @@ z-index: -1;
 }
 
 .main.slide .mobile-warning {
-  color: rgb(255, 157, 157);
+  color: rgb(255, 229, 229);
   font-weight: 800;
   position: absolute;
   left: 50%;
-  top: 30vh;
+  top: 20vh;
   transform: translateX(-50%);
 width: 80vw;
 visibility: hidden;
+z-index: 3;
+background-color: darkred;
+text-align: center;
+padding: 5px;
+border-radius: 10px;
 }
 
 
@@ -167,9 +184,49 @@ visibility: hidden;
 
 
 
+.overview.slide .hint::after{
+  content: '>Hover over a box...';
+}
 
+@media screen and (max-width: 1000px) {
+  .overview.slide .hint::after{
+    content: '>Tap on a box...\a(Support for this device will come soon...)';
+    white-space: pre-wrap;
+  }
+}
 
+.overview-container{
 
+  width: 60vw;
+  height: 50vh;
+  position: absolute;
+  left: 50vw;
+  top: 30vh;
+  transform: translateX(-50%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  position: relative;
+
+width: 20%;
+height: 50%;
+display: inline-block;
+border-radius: 30px;
+background-color: rgba(255, 255, 255, 0.233);
+box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.248);
+transition: 1s;
+}
+
+.box:hover{
+  
+width: 30%;
+height: 120%;
+transition: 1s;
+animation-fill-mode: both;
+}
 
 
 

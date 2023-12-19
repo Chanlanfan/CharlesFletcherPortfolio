@@ -1,0 +1,110 @@
+
+
+<!-- <div id="page-lines">
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+</div> -->
+
+
+
+<!-- 
+<div id="main-title">
+<h1>INSPIRED BY<br>POTENTIAL</h1>
+<script>
+    gsap.to('#main-title h1', {
+  xPercent: -150,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#main-title h1",
+    start: "top center",
+    end: "bottom top",
+    scrub: true
+  }
+})
+</script> 
+
+
+
+</div>
+
+<div id="about">
+    <script>
+    gsap.to('#about', {
+
+  scrollTrigger: {
+    trigger: "#about",
+    markers: 0,
+    start: "top 100",
+    end: vh(200),
+    pin: "#about",
+    scrub: 0.1,
+
+
+  }
+})
+        </script> -->
+        <!-- <hr><br>
+<h2>Hi! My name is Charles, and I am known as the 'Tech Guy'<br>I'm not very good at essays, so I'll get ChatGPT to do it for me:<br><br><b>"My journey through the digital landscape has equipped me with fluent skills in HTML, CSS, JavaScript, Java, and C++. These coding languages are not just tools for me; they are pathways to creativity and problem-solving. Beyond the world of programming, I dive into the realm of music technology, where I have gained extensive knowledge about mixers, EQ (Equalization), and the intricate web of audio cables. Whether I'm writing lines of code or tinkering with audio equipment, I find joy in exploring the endless possibilities that technology and music offer. Join me on this exciting journey as we uncover the intersections between tech and music, and how they shape our modern world."</b><br><br>Literaly what I wanted to say.<br>P.S. I made this site from scratch. ChatGPT hasn't helped me! (yet)</h2>
+
+
+<div id="skill-list">
+
+<h1 class="header-skill">My Skills:  (swipe across)</h1>
+<p><strong>Programming languages: (All self-taught)</strong>  <br>
+ • HTML - 5 years, fluent <br>
+ • CSS - 4.5 years, fluent <br>
+ • JavaScript - 2 years, can do basic operations for Web dev. <br>
+ • C++ - 4 years, Mainly Arduino  <br>
+ • Java - 3 years (1 year ago), for Minecraft mod/plugin development <br>
+ <br>
+ <strong>Application/Sowtware Skills:</strong>  <br>
+ • 2D & 3D modeling and animation: Blender - 5 years, extremely comfortable <br>
+ • IDE: VScode - 6 years, extremely comfortable <br>
+ • Video Editing: Adobe Premiere Pro - 3 years, efficiently navigate and use<br>
+ • Graphic Design: Adobe Photoshop and Adobe Illistrator - 3 years, efficiently navigate and use<br>
+ • Live Streaming: OBS - 6 years, mastered controls & operate efficiently<br>
+ • Lighting Rigs: DMXCreator - 1yr, mastered controls & excellent understanding of sowftware
+ <br>
+  <br>
+ <strong>Music Technology: (2 years)</strong>  <br>
+
+ • Understands how to effectively operate a mixer.<br>
+ • Excellent understanding in sound and lighting equipment. Like cable types and uses, aswell as speakers, mics and others. <br>
+ • Excellent at operating lighting rigs.<br>
+ • Can adjust EQ to fit enviroment.<br>
+ Notable past/present roles: Head of Lighting for SACS '23 Production: Footloose. Currently co-head technician of sound equipment for school events.
+ <br>
+
+</p>
+</div>
+</div>
+
+<div id="services">
+  <h1 class="header-skill">Services: (swipe across)</h1>
+<p><strong>(Must provide equipment)</strong> <br>
+  <strong>Live Streaming Events</strong>  <br>
+ • Proffesional Streaming<br>
+ • Smooth transitions and effects<br>
+ • Setup cameras that are local or over a network <br>
+ • Very flexible <br>
+ <br>
+ <strong>Website development</strong>  <br>
+ • Currently only doing basic (static) sites, such as portfolios and informational sites<br>
+ • Very efficient<br>
+ • Very flexible<br>
+ • Advise on how to host<br>
+ <br>
+  <br>
+ <strong>Tech Support</strong>  <br>
+ • Basic Hardware or Software assistance<br>
+ • Install/Remove software or hardware<br>
+ • fix technical bug/glitch<br>
+ • Further advise or support<br>
+ <br>
+
+</p>
+</div> -->
+
