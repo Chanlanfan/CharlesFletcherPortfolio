@@ -11,29 +11,61 @@
       gsap.registerPlugin(ScrollTrigger);</script>
 </head>
 <body>
+
+<script>
+let div = document.querySelector('#cursor');
+let body = document.querySelector('body');
+document.onmousemove = function(e){
+
+  cursor.style.top = e.pageY + 'px';
+  cursor.style.left = e.pageX + 'px';
+}
+
+</script> 
+
     <header>
         <h1 id="name-heading">Charles Fletcher's Portfolio</h1>
     </header>
 
-    <div class="background-container">
-        <div id="block1"><p>+</p></div>
 
-    </div>
+<div class="slides">
 
+<div class="slide main ">
+  <p class="hint"></p>
+  <p class="mobile-warning">Visit this site on a computer for a more enjoyable experience! </p>
+  <div class="background"></div>
+   <div id="cursor"></div>
+<img id="main-img" src="/img/background.png">
+</div>
 
-
-
-<div id="page-lines">
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
+<div class="slide overview">
+  <div class="background"></div>
 </div>
 
 
 
 
+
+
+
+</div>
+
+
+
+
+
+
+<!-- <div id="page-lines">
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+</div> -->
+
+
+
+<!-- 
 <div id="main-title">
 <h1>INSPIRED BY<br>POTENTIAL</h1>
 <script>
@@ -47,14 +79,14 @@
     scrub: true
   }
 })
-</script>
+</script> 
 
 
 
 </div>
 
 <div id="about">
-    <!-- <script>
+    <script>
     gsap.to('#about', {
 
   scrollTrigger: {
@@ -69,7 +101,7 @@
   }
 })
         </script> -->
-        <hr><br>
+        <!-- <hr><br>
 <h2>Hi! My name is Charles, and I am known as the 'Tech Guy'<br>I'm not very good at essays, so I'll get ChatGPT to do it for me:<br><br><b>"My journey through the digital landscape has equipped me with fluent skills in HTML, CSS, JavaScript, Java, and C++. These coding languages are not just tools for me; they are pathways to creativity and problem-solving. Beyond the world of programming, I dive into the realm of music technology, where I have gained extensive knowledge about mixers, EQ (Equalization), and the intricate web of audio cables. Whether I'm writing lines of code or tinkering with audio equipment, I find joy in exploring the endless possibilities that technology and music offer. Join me on this exciting journey as we uncover the intersections between tech and music, and how they shape our modern world."</b><br><br>Literaly what I wanted to say.<br>P.S. I made this site from scratch. ChatGPT hasn't helped me! (yet)</h2>
 
 
@@ -129,8 +161,33 @@
  <br>
 
 </p>
-</div>
+</div> -->
 
 
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".slide");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".slides",
+    pin: true,
+    scrub: 1,
+    snap: {
+    snapTo: 1 / (sections.length - 0.1),
+    duration: { min: 0.2, max: 1 },
+    delay: 0.1
+  },
+    end: () => "+=" + document.querySelector(".slides").offsetWidth
+  }
+});
+
+
+
+
+</script>
 </body>
 </html>
