@@ -36,6 +36,18 @@ border-radius: 10px;
 box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
 }
 
+.cursor-bulb {
+  position: fixed;
+  width: 0px;
+  height:0px;
+  background-color: rgb(255, 255, 255);
+z-index: 1;
+border-radius: 10px;
+box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
+}
+
+
+
 
 .background{
   position: absolute;
@@ -138,13 +150,20 @@ z-index: -1;
 
 .main.slide .hint::after{
   content: '>Move your cursor around...';
+
 }
+
+
+
 
 @media screen and (max-width: 1000px) {
   .main.slide .hint::after{
     content: '>Tap anywhere on the screen...';
   }
 }
+
+
+
 
 .main.slide .mobile-warning {
   color: rgb(255, 229, 229);
@@ -227,6 +246,69 @@ height: 120%;
 transition: 1s;
 animation-fill-mode: both;
 }
+
+
+
+.box.one .header::after{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 4px;
+  width: auto;
+  content: 'Tech Wiz';
+  transition: 0.1s;
+  white-space: nowrap;
+  transition: 1s;
+}
+
+
+.box.one:hover .header::after{
+  position: absolute;
+left: 7.25%;
+transform: translateX(0%);
+top: 10%;
+transition: 1s;
+
+font-size: 1.8em;
+height: auto;
+
+}
+
+
+
+.box.one img{
+  position: absolute;
+width: 50%;
+filter: invert();
+right: 50%;
+top: 60%;
+transform: translate(-50%, -50%);
+transition: 1s;
+right: 0;
+}
+
+ .box.one:hover img,  .box.one:hover img {
+  position: absolute;
+width: 20%;
+
+right: 15%;
+top: 10%;
+transform: translate(0, -25%);
+transition: 1s;
+}
+
+
+
+
+
+
+
+
+
 
 
 

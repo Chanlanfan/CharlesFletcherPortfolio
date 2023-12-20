@@ -11,6 +11,9 @@
       gsap.registerPlugin(ScrollTrigger);</script>
 </head>
 <body>
+ 
+
+
 
 <script>
 let div = document.querySelector('#cursor');
@@ -19,9 +22,13 @@ document.onmousemove = function(e){
 
   cursor.style.top = e.pageY + 'px';
   cursor.style.left = e.pageX + 'px';
+
 }
 
-</script> 
+
+</script>
+
+
 
     <header>
         <h1 id="name-heading">Charles Fletcher's Portfolio</h1>
@@ -29,13 +36,16 @@ document.onmousemove = function(e){
 
 
 <div class="slides">
-
+   
 <div class="slide main ">
   <p class="hint main-slide"></p>
   <p class="mobile-warning">Visit this site on a computer for a more enjoyable experience!<br> Rotate your phone to landscape mode (to make screen wider) to surf the site. (Mobile support will come at a later stage)</p>
   <div class="background"></div>
-   <div id="cursor"></div>
+   <div id="cursor">
+    
+   </div>
 <img id="main-img" src="/img/background.png">
+
 </div>
 
 <div class="slide overview">
@@ -43,7 +53,13 @@ document.onmousemove = function(e){
 <p class="hint overview-slide"></p>
 <div class="overview-container">
 
-<div class="box one"></div>
+<div class="box one">
+  <p class="header"></p>
+
+<img src="/img/wand.png">
+
+
+</div>
   <div class="box two"></div>
     <div class="box three"></div>
 
