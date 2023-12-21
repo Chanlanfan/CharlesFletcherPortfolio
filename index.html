@@ -32,6 +32,9 @@ document.onmousemove = function(e){
 
     <header>
         <h1 id="name-heading">Charles Fletcher's Portfolio</h1>
+        <div id="site-learn-more" onclick="location.href='/aboutSite.html';">
+<p>Click to learn more</p>
+        </div>
     </header>
 
 
@@ -124,17 +127,20 @@ Since the first time I set my eyes on a computer, I've somehow aquired the power
 
 
 
+<div class="slide projects" id="projects">
+  <div class="background"></div>
+
+
 
 </div>
-
-<div class="slides">
-
-
-<div class="slide projects">
-
 </div>
 
-</div>
+
+
+
+
+
+
 
 
 
@@ -161,7 +167,7 @@ gsap.to(sectionOne, {
   scrollTrigger: {
     trigger: ".slides",
     pin: true,
-    scrub: 1,
+    scrub: 3,
     snap: {
     snapTo: 1 / (sectionOne.length - 1),
     duration: { min: 0.2, max: 1 },
