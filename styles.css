@@ -2,60 +2,67 @@
 
 /* fixxed */
 * {
-margin: 0;
-    font-family:  'Courier New', monospace;
+  margin: 0;
+  font-family: 'Courier New', monospace;
 
 }
 
-html  {
+html {
   overflow-y: scroll;
-	height: 100%;
-	-webkit-overflow-scrolling: touch;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
-overflow-x: hidden; 
-overflow-y: visible;
-position: relative;
-height: unset; 
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+
+
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 
-html, body {
+html,
+body {
   overflow-x: hidden;
-	margin: 0;
+  margin: 0;
 }
 
 #cursor {
   position: fixed;
   width: 0px;
-  height:0px;
+  height: 0px;
   background-color: rgb(255, 255, 255);
-z-index: 1;
-border-radius: 10px;
-box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
 }
 
 .cursor-bulb {
   position: fixed;
   width: 0px;
-  height:0px;
+  height: 0px;
   background-color: rgb(255, 255, 255);
-z-index: 1;
-border-radius: 10px;
-box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
 }
 
 
 
 
-.background{
+.background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100%;
-  z-index:-2;
+  z-index: -2;
+  visibility: visible;
 }
 
 
@@ -71,30 +78,34 @@ box-shadow: 0px 0px 150px 150px rgb(255, 255, 255);
 }
 
 header {
-position: fixed;
-    height: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    /* border: solid red 1px; */
-padding: 10px;
-z-index: 4;
+  position: fixed;
+  height: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: solid red 1px; */
+  padding: 10px;
+  z-index: 4;
 }
 
 #name-heading {
-    position: absolute;
-    top: 50%;
-left: 50%;
-color: white;
-transform: translate(-50%, -50%);
-white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
+
 @media screen and (max-width: 1000px) {
   #name-heading {
     font-size: 20px;
   }
 }
 
-
+#name-heading:hover{
+  animation: cursor-randomizer 5s infinite linear;
+ 
+}
 
 
 .slides {
@@ -108,33 +119,36 @@ white-space: nowrap;
 .main.slide {
   position: absolute;
   top: 0;
-left: 0px;
-width: 100vw;
-height: 100vh;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
 
 }
-.main.slide:hover{
+
+.main.slide:hover {
   cursor: none;
 }
 
-.main.slide .background{
+.main.slide .background {
   background-color: rgb(0, 0, 0);
-z-index: -1;
+  z-index: -1;
+  visibility: visible;
 }
+
 @media screen and (max-width: 1000px) {
-  .main.slide .background{
+  .main.slide .background {
     background-color: rgb(0, 0, 0);
-  
+
   }
 }
 
- #main-img {
+#main-img {
   position: relative;
   width: 100vw;
   height: 100vh;
   z-index: 1;
   opacity: 01;
-  
+
 }
 
 .main.slide .hint {
@@ -148,16 +162,28 @@ z-index: -1;
   z-index: 3
 }
 
-.main.slide .hint::after{
+.main.slide .hint::after {
+  /* animation-name: main-slide-hint;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite; */
   content: '>Move your cursor around...';
-
 }
+
+/* @keyframes main-slide-hint {
+  33% {content: '>Move your cursor around.';}
+  66% {content: '>Move your cursor around..';}
+  99% {content: '>Move your cursor around...';}
+} */
+
+
 
 
 
 
 @media screen and (max-width: 1000px) {
-  .main.slide .hint::after{
+  .main.slide .hint::after {
     content: '>Tap anywhere on the screen...';
   }
 }
@@ -172,21 +198,48 @@ z-index: -1;
   left: 50%;
   top: 20vh;
   transform: translateX(-50%);
-width: 80vw;
-visibility: hidden;
-z-index: 3;
-background-color: darkred;
-text-align: center;
-padding: 5px;
-border-radius: 10px;
+  width: 80vw;
+  visibility: hidden;
+  z-index: 3;
+  background-color: darkred;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .main.slide .mobile-warning {
     visibility: visible;
   }
 }
+
+
+
+
+
+
+#lights-on-button {
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  z-index: 3;
+  color: black;
+  background-color: black;
+  border: 0;
+  cursor: none;
+
+}
+
+
+
+#lights-on-button:hover {
+  background-color: rgba(109, 109, 109, 0.485);
+
+}
+
+
+
 
 
 .slides .overview.slide {
@@ -197,24 +250,25 @@ border-radius: 10px;
   width: 100vw;
 }
 
+
 .slides .slide.overview .background {
   background-image: linear-gradient(142deg, rgb(58, 127, 255), rgb(227, 13, 255));
 }
 
 
 
-.overview.slide .hint::after{
+.overview.slide .hint::after {
   content: '>Hover over a box...';
 }
 
 @media screen and (max-width: 1000px) {
-  .overview.slide .hint::after{
+  .overview.slide .hint::after {
     content: '>Tap on a box...\a(Support for this device will come soon...)';
     white-space: pre-wrap;
   }
 }
 
-.overview-container{
+.overview-container {
 
   width: 60vw;
   height: 50vh;
@@ -230,26 +284,29 @@ border-radius: 10px;
 .box {
   position: relative;
 
-width: 20%;
-height: 50%;
-display: inline-block;
-border-radius: 30px;
-background-color: rgba(255, 255, 255, 0.233);
-box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.248);
-transition: 1s;
+  width: 20%;
+  height: 50%;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.233);
+  box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.248);
+  transition: 1s;
+
 }
 
-.box:hover{
-  
-width: 30%;
-height: 120%;
-transition: 1s;
-animation-fill-mode: both;
+.box:hover {
+
+  width: 30%;
+  height: 120%;
+  transition: 1s;
+  animation-fill-mode: both;
 }
 
+.box.three:hover{
+cursor: wait;
+}
 
-
-.box.one .header::after{
+.box .header::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -259,63 +316,111 @@ animation-fill-mode: both;
   font-weight: 800;
   letter-spacing: 4px;
   width: auto;
-  content: 'Tech Wiz';
   transition: 0.1s;
   white-space: nowrap;
   transition: 1s;
 }
 
 
-.box.one:hover .header::after{
-  position: absolute;
-left: 7.25%;
-transform: translateX(0%);
-top: 10%;
-transition: 1s;
+.box.one .header::after {
+  content: 'Tech Wiz';
+}
 
-font-size: 1.8em;
-height: auto;
+.box.two .header::after {
+  content: 'Bilingual';
+}
+
+.box.three .header::after {
+  content: 'Something';
+  white-space: pre-wrap;
+
+}
+
+
+.box:hover .header::after {
+  position: absolute;
+  left: 7.25%;
+  transform: translateX(0%);
+  top: 10%;
+  transition: 1s;
+
+  font-size: 1.8em;
+  height: auto;
 
 }
 
 
 
-.box.one img{
+.box img {
   position: absolute;
-width: 50%;
-filter: invert();
-right: 50%;
-top: 60%;
-transform: translate(-50%, -50%);
-transition: 1s;
-right: 0;
+  width: 50%;
+  filter: invert();
+  right: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+  right: 0;
 }
 
- .box.one:hover img,  .box.one:hover img {
-  position: absolute;
-width: 20%;
+.box.two img{
+  width: 60%;
+  transform: translate(-35%, -50%);
+}
+.box.three img{
+  width: 50%;
+  transform: translate(-50%, -50%);
+}
 
-right: 15%;
-top: 10%;
-transform: translate(0, -25%);
-transition: 1s;
+
+
+.box:hover img,
+.box:hover img {
+  position: absolute;
+  width: 20%;
+
+  right: 15%;
+  top: 10%;
+  transform: translate(0, -25%);
+  transition: 1s;
+}
+
+.box.three:hover img {
+  position: absolute;
+  width: 20%;
+
+  right: 5%;
+  top: 10%;
+  transform: translate(-15%, -25%);
 }
 
 
 
 
+.box .body {
+  color: rgba(255, 255, 255, 0);
+  visibility: hidden;
+  margin: 45% 5% 5% 5%;
+  font-size: 1.25em;
+}
+
+
+.box:hover .body,
+.box:hover .body {
+  color: white;
+  visibility: visible;
+  transition-delay: .68s;
+  transition-duration: 1s;
+}
 
 
 
-
-
-
-
-
-
-
-
-
+.slides .projects.slide {
+  position: absolute;
+  top: 100vh;
+  left: 00vw;
+  height: 100vh;
+  width: 100vw;
+}
 
 
 
@@ -327,54 +432,148 @@ transition: 1s;
 
 
 @keyframes cursor-randomizer {
-   0% {cursor: alias;}
-    2.8% {cursor:all-scroll;}
-    5.6% {cursor:auto;}
-    8.34% {cursor: cell;}
-    11.12% {cursor: col-resize;}
-    13.9% {cursor: context-menu;}
-    16.68% {cursor: copy;}
-    19.46% {cursor: crosshair;}
-    22.24% {cursor: default;}
-    25.02% {cursor: e-resize;}
-    27.8% {cursor: ew-resize;}
-    30.58% {cursor: grab;}
-    33.36% {cursor: zoom-in;}
-    36.14% {cursor: help;}
-    38.92% {cursor: move;}
-    41.7% {cursor: n-resize;}
-    44.48% {cursor: ne-resize;}
-    47.26% {cursor: nesw-resize;}
-    50.04% {cursor: no-drop;}
-    52.82% {cursor: none;}
-    55.6% {cursor: not-allowed;}
-    58.38% {cursor: ns-resize;}
-    61.16% {cursor: nw-resize;}
-    63.94% {cursor: nwse-resize;}
-    66.72% {cursor: pointer;}
-    69.5% {cursor: progress;}
-    72.28% {cursor: row-resize;}
-    75.06% {cursor: s-resize;}
-    77.84% {cursor: se-resize;}
-    80.62% {cursor: sw-resize;}
-    83.4% {cursor: text;}
-    86.18% {cursor: vertical-text;}
-    88.96% {cursor: w-resize;}
-    91.74% {cursor: wait;}
-    94.52% {cursor: grabbing;}
-    100% {cursor: zoom-out;}
-    
+  0% {
+    cursor: alias;
+  }
+
+  2.8% {
+    cursor: all-scroll;
+  }
+
+  5.6% {
+    cursor: auto;
+  }
+
+  8.34% {
+    cursor: cell;
+  }
+
+  11.12% {
+    cursor: col-resize;
+  }
+
+  13.9% {
+    cursor: context-menu;
+  }
+
+  16.68% {
+    cursor: copy;
+  }
+
+  19.46% {
+    cursor: crosshair;
+  }
+
+  22.24% {
+    cursor: default;
+  }
+
+  25.02% {
+    cursor: e-resize;
+  }
+
+  27.8% {
+    cursor: ew-resize;
+  }
+
+  30.58% {
+    cursor: grab;
+  }
+
+  33.36% {
+    cursor: zoom-in;
+  }
+
+  36.14% {
+    cursor: help;
+  }
+
+  38.92% {
+    cursor: move;
+  }
+
+  41.7% {
+    cursor: n-resize;
+  }
+
+  44.48% {
+    cursor: ne-resize;
+  }
+
+  47.26% {
+    cursor: nesw-resize;
+  }
+
+  50.04% {
+    cursor: no-drop;
+  }
+
+  52.82% {
+    cursor: none;
+  }
+
+  55.6% {
+    cursor: not-allowed;
+  }
+
+  58.38% {
+    cursor: ns-resize;
+  }
+
+  61.16% {
+    cursor: nw-resize;
+  }
+
+  63.94% {
+    cursor: nwse-resize;
+  }
+
+  66.72% {
+    cursor: pointer;
+  }
+
+  69.5% {
+    cursor: progress;
+  }
+
+  72.28% {
+    cursor: row-resize;
+  }
+
+  75.06% {
+    cursor: s-resize;
+  }
+
+  77.84% {
+    cursor: se-resize;
+  }
+
+  80.62% {
+    cursor: sw-resize;
+  }
+
+  83.4% {
+    cursor: text;
+  }
+
+  86.18% {
+    cursor: vertical-text;
+  }
+
+  88.96% {
+    cursor: w-resize;
+  }
+
+  91.74% {
+    cursor: wait;
+  }
+
+  94.52% {
+    cursor: grabbing;
+  }
+
+  100% {
+    cursor: zoom-out;
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

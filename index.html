@@ -25,7 +25,7 @@ document.onmousemove = function(e){
 
 }
 
-
+  
 </script>
 
 
@@ -41,11 +41,18 @@ document.onmousemove = function(e){
   <p class="hint main-slide"></p>
   <p class="mobile-warning">Visit this site on a computer for a more enjoyable experience!<br> Rotate your phone to landscape mode (to make screen wider) to surf the site. (Mobile support will come at a later stage)</p>
   <div class="background"></div>
-   <div id="cursor">
-    
-   </div>
+   <div id="cursor"></div>
 <img id="main-img" src="/img/background.png">
+<input id="lights-on-button" type="button" value="Turn on the lights" onclick="lightsOn();">
 
+<script>
+function lightsOn(){
+  document.querySelectorAll(".background")[0].style.visibility = "hidden";
+console.log("Hello world!");
+}
+
+
+</script>
 </div>
 
 <div class="slide overview">
@@ -53,32 +60,85 @@ document.onmousemove = function(e){
 <p class="hint overview-slide"></p>
 <div class="overview-container">
 
+
+
+  <!-- Box One -->
 <div class="box one">
   <p class="header"></p>
-
 <img src="/img/wand.png">
+<p class="body">
+Since the first time I set my eyes on a computer, I've somehow aquired the power of knowing every single device's ins and outs.
+<br>
+<br>
+
+<strong>Overview:</strong><br>
+• Expert experience in the following Operating Systems: Windows, macOS, iOS, tvOS, watchOS and Ubuntu<br>
+</p>
+
+</div>
+
+
+
+
+
+
+<!-- Box Two -->
+  <div class="box two">
+    <p class="header"></p>
+
+    <img src="/img/braces.png">
+    <p class="body">
+     Over the last 5 years, I have written in more than 8 (programming) languages.<br>
+      <br>
+      <br>
+      
+      <strong>Overview:</strong><br>
+      • Fluent in:<br>
+         - HTML, CSS, JavaScript PHP and SQL,<br>
+         - Java and C#<br><br>
+      • experience in:<br>
+- C++ and Python
+    </p>
+    
+  </div>
+
+
+
+
+<!-- Box Three -->
+    <div class="box three">
+      <p class="header"></p>
+
+      <img src="/img/clock.png">
+      
+      <p class="body">
+        Coming Soon! <br>
+        I needed 3 blocks to make it look nice, but I can't think of a third item (yet).
+        <br><br>
+        Keep scrolling :)
+       </p>
+    </div>
+</div>
+
+</div>
+
+
 
 
 </div>
-  <div class="box two"></div>
-    <div class="box three"></div>
+
+<div class="slides">
 
 
+<div class="slide projects">
 
-
+</div>
 
 </div>
 
-</div>
-</div>
 
 
 
-
-
-
-
-</div>
 
 
 
@@ -93,23 +153,26 @@ document.onmousemove = function(e){
 
   gsap.registerPlugin(ScrollTrigger);
 
-let sections = gsap.utils.toArray(".slide");
+let sectionOne = gsap.utils.toArray(".slide");
 
-gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
+gsap.to(sectionOne, {
+  xPercent: -100 * (sectionOne.length - 1),
   ease: "none",
   scrollTrigger: {
     trigger: ".slides",
     pin: true,
     scrub: 1,
     snap: {
-    snapTo: 1 / (sections.length - 0.1),
+    snapTo: 1 / (sectionOne.length - 1),
     duration: { min: 0.2, max: 1 },
-    delay: 0.1
+    delay: 0.1,
   },
-    end: () => "+=" + document.querySelector(".slides").offsetWidth
+    end: () => "+=" + document.querySelector(".slide").offsetWidth,
+
   }
 });
+
+
 
 
 
