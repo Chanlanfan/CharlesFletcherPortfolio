@@ -58,10 +58,58 @@ console.log("Hello world!");
 </script>
 </div>
 
-<div class="slide overview">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="slide overview" id="slide-overview" onclick="openSoftware()">
   <div class="background"></div>
+  <div id="software-overview-background-pre"></div>
 <p class="hint overview-slide"></p>
-<div class="overview-container">
+
+<div id="software-heading">
+
+<p>My Software Skills</p>
+
+</div>
+<div id="software-button" >
+<input  value="Learn more" type="button" onclick="location.href='/profiles/software.html';">
+</div>
+
+<div class="overview-container"  >
 
 
 
@@ -123,6 +171,9 @@ Since the first time I set my eyes on a computer, I've somehow aquired the power
     </div>
 </div>
 
+
+
+
 </div>
 
 
@@ -140,7 +191,19 @@ Since the first time I set my eyes on a computer, I've somehow aquired the power
 
 
 
+<script>
+function openSoftware() {
+  document.getElementById('slide-overview').className = 'slide-overview-transition';
+  document.querySelectorAll("#software-overview-background-pre")[0].style.visibility = "visible";
+  document.querySelectorAll("#software-overview-background-pre")[0].style.top = "100vh";
+  setTimeout(swapToSoftware, 3000);
+}
 
+function swapToSoftware() {
+  window.location.href = '/profiles/software.html';
+}
+
+</script>
 
 
 
